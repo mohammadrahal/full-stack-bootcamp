@@ -42,7 +42,7 @@ if (age >= 22 && hasDriverLicense && !hasCar) {
   if (age < 18 && !hasDriverLicense && !hasCar) {
     needDriver = true;
   }
-  console.log(needDriver);
+  console.log(!needDriver);
 
 //   STEP 4
 

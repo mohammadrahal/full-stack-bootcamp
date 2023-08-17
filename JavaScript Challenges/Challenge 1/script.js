@@ -44,6 +44,5 @@ const per="null undefined";
 
  const num1= 0;
  const num2= 1;
- const resulte = num1 + num2
- `${num1} + ${num2} `;
+ const resulte = `${num1} + ${num2} `;
  console.log(resulte)

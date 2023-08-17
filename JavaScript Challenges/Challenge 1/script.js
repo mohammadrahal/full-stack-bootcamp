@@ -1,7 +1,7 @@
 console.log('I am linked now!');
 
 const name = "mohammad";
-alert(name)
+// alert(name)
 
 const String = "this is a text";
 console.log(String  + " the data type is String");
@@ -14,8 +14,17 @@ console.log(number  +  " the data type is number");
 const string = "999";
 console.log(string  +  " the data type is String");
 const operator = `{}`;
-console.log(operator  +  " the data type is Operator" );
-const array= "[]";
+console.log(operator  +  " the data type is Operator" ); 
+const array= ["array"];
 console.log(array  +  " the data type is Array" );
 const per="null undefined";
- console.log(per  +  " the data type is primitive data types")
+ console.log(per  +  " the data type is primitive data types");
+
+ const fullNameObject = {
+
+    fname:"mohamad",
+    lname:"rahal",
+    DOB:"1996"
+ } 
+ console.log(fullNameObject.fname, fullNameObject.lname, fullNameObject.DOB);
+

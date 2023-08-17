@@ -62,7 +62,7 @@
   const singleQuote =
     'This is my text using single quotations ${counter} times';
   const doubleQuote =
-    'This is my text using double quotations ${counter} times';
+    "This is my text using double quotations ${counter} times";
   const tryThisAlso = `This is my new version, it’s the ${2 + 3}th version`;
   ```
 - Copy the above code snippet into the JS file.

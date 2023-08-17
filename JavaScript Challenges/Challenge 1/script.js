@@ -28,3 +28,15 @@ const per="null undefined";
  } 
  console.log(fullNameObject.fname, fullNameObject.lname, fullNameObject.DOB);
 
+ const counter = 3;
+ console.log(counter)
+ const backtick = `This is my text using backticks ${counter} times`;
+ console.log(backtick + " also known as template strings ");
+ const singleQuote =
+ 'This is my text using single quotations ${counter} times' ;
+   console.log(singleQuote);
+ const doubleQuote =
+   "This is my text using double quotations ${counter} times";
+   console.log(doubleQuote);
+ const tryThisAlso = `This is my new version, it’s the ${2 + 3} th version`;
+ console.log(tryThisAlso);

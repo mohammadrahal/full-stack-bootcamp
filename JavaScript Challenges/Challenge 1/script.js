@@ -40,3 +40,10 @@ const per="null undefined";
    console.log(doubleQuote);
  const tryThisAlso = `This is my new version, it’s the ${2 + 3} th version`;
  console.log(tryThisAlso);
+
+
+ const num1= 0;
+ const num2= 1;
+ const resulte = num1 + num2
+ `${num1} + ${num2} `;
+ console.log(resulte)

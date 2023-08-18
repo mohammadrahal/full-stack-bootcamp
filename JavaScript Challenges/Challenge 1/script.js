@@ -42,8 +42,8 @@ const per="null undefined";
  console.log(tryThisAlso);
 
 // step 6
- const num1= 0;
- const num2= 1;
+ const num1=" 0";
+ const num2= "1";
  const resulte = `${num1} + ${num2} `;
  console.log(resulte);
 

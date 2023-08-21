@@ -19,7 +19,6 @@ console.log(expression1, expression2, expression3, expression4);
 
 const age = 25;
 let hasDriverLicense = true;
-// hasDriverLicense = !hasDriverLicense
 let hasCar = false;
 let canDrive = false;
 let canRentCar = false;

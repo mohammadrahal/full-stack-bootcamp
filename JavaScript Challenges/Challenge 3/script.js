@@ -61,4 +61,17 @@ console.log(compute(10, 5, 'add'));
 console.log(compute(9, 3, 'subtract'));
 console.log(compute(4, 0, 'multiply'));
 console.log(compute(8,3, 'divide'));
+// 
+let locallVar = 9;
+const squareNumber = (number) => number * number;
+squareNumber(5)
+console.log(locallVar);
+
+
+
+let globalVar = 5;
+console.log(squareNumber(globalVar) + " squareNumber globalVar" );
+// 
+
+
 

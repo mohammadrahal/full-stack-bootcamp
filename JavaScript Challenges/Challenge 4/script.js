@@ -8,14 +8,14 @@ const personalInfo = {
     fname:"mohammad",
     age:27,
     height:"185 cm",
-    location:"lebanon tyre",
+    locations:"lebanon tyre",
     nationality:"lebanon"
 }
 
 console.log("I'm " + personalInfo.fname);
 console.log( personalInfo.age + " years");
 console.log("I'm " + personalInfo.height);
-console.log("location " + personalInfo.location);
+console.log("location " + personalInfo.locations);
 console.log("from " + personalInfo.nationality);
 
 // step 2
@@ -42,3 +42,21 @@ fullInfoArray.sort((a, b) => a[0].localeCompare(b[0]));
 const sortedFullInfo = Object.fromEntries(fullInfoArray);
 
 console.log(fullInfo);
+
+// Step 3
+
+// Destructuring Arrays
+
+// mwjod fiveNumbers bel task abel so bjebon mno
+const [firstNum, secondNum, thirdNum] = fiveNumbers;
+console.log(firstNum); //1
+console.log(secondNum); //2
+console.log(thirdNum); //3 index
+
+// Destructuring Objects
+// 3mlo abel
+const { fname, locations, nationality } = personalInfo;
+
+console.log(fname);
+console.log(locations);  
+console.log(nationality);

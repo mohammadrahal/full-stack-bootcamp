@@ -9,7 +9,12 @@ const personalInfo = {
     age:27,
     height:"185 cm",
     locations:"lebanon tyre",
-    nationality:"lebanon"
+    nationality:"lebanon",
+
+    contactInfo: { 
+        email:"info@gmail.com",
+        phone:78907635,
+    }
 }
 
 console.log("I'm " + personalInfo.fname);
@@ -20,8 +25,8 @@ console.log("from " + personalInfo.nationality);
 
 // step 2
 // New Array with Spread
-const fiveNumbers = [1, 2, 3,];
-const nextThreeNumbers = [4,5,6];
+const fiveNumbers = [1, 2, 3,4,5];
+const nextThreeNumbers = [6,7,8];
 
 const allNumbers = [...fiveNumbers, ...nextThreeNumbers];
 
@@ -60,3 +65,34 @@ const { fname, locations, nationality } = personalInfo;
 console.log(fname);
 console.log(locations);  
 console.log(nationality);
+
+// step 4
+const { contactInfo: { email, phone } } = personalInfo;
+
+console.log(email);
+console.log(phone);
+
+// Rest with Destructuring
+
+const [firstNum1, secondNum2, ...restOfNumbers] = fiveNumbers;
+
+console.log(firstNum);
+console.log(secondNum);
+console.log(restOfNumbers);   // Output: [3, 4, 5]
+
+// Merging and Overwriting with Spread
+
+const info = {
+    name: "mohammad",
+    age: 25,
+    occupation: "web developer"
+};
+
+const infoOver = {
+    age: 27,
+    hobby: "Reading"
+};
+
+const merging = { ...info, ...infoOver };
+
+console.log(merging);

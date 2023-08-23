@@ -32,18 +32,64 @@ document.body.appendChild(containerDiv);
 
 // Use querySelector instead of querySelectorAll hata y3ml select l element whde 
 const container = document.querySelector('.container'); 
-const paragraph1 = document.createElement('p');
 container.style.backgroundColor = 'blue';
 
-paragraph1.style.color = '#fff';
-paragraph1.style.fontSize = '24px';
-paragraph1.style.fontFamily = 'Helvetica';
-paragraph1.style.border = '1px solid black';
+paragraph.style.color = '#ffffff';
+paragraph.style.fontSize = '24px';
+paragraph.style.fontFamily = 'Helvetica';
+paragraph.style.border = '1px solid black';
 const styleTag = document.createElement('style');
 styleTag.textContent = 'h1, h2, h3, h4, h5, h6 { font-style: italic; }';
 document.head.appendChild(styleTag);
 
 // Append the  elements
-container.appendChild(paragraph1); 
+// container.appendChild(paragraph); 
 document.body.appendChild(container);
+
+//button
+const newButton = document.createElement('button');
+newButton.classList.add('button');
+const paragraphButton = document.createElement('p');
+paragraphButton.textContent = 'Click here';
+newButton.appendChild(paragraphButton);
+document.body.appendChild(newButton);
+
+newButton.style.backgroundColor = 'red';
+paragraphButton.style.color = 'white';
+
+newButton.addEventListener("mouseover", () => {
+    newButton.style.backgroundColor = 'blue';
+});
+
+newButton.addEventListener("mouseout", () => {
+    newButton.style.backgroundColor = 'red';
+});
+
+
+// Event Delegation
+const originalDiv = document.getElementById('original');
+
+originalDiv.addEventListener('click', event => {
+  const target = event.target;
+  
+  if (target.tagName === 'BUTTON') {
+    console.log(target.textContent);
+  }
+});
+//form 
+
+const form = document.getElementById('myForm');
+let submit;
+form.addEventListener('submit', event => {
+  event.preventDefault(); // Prevent default form submission
+  
+  const formData = new FormData(form);
+  const formDataObject = {};
+
+  for (const [key, value] of formData.entries()) {
+    formDataObject[key] = value;
+  }
+
+  console.log(formDataObject);
+});
 

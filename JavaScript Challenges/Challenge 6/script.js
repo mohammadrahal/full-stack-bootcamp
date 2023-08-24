@@ -32,3 +32,40 @@ const delayedPromise = new Promise((resolve, reject) => {
       console.error(error);
     });
   
+    // Step 2
+
+    // Simulated network request promise
+const networkRequest = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const shouldResolve = Math.random() >= 0.5; // Simulate success or failure
+      if (shouldResolve) {
+        resolve("Data fetched successfully!");
+      } else {
+        reject("Network Error!");
+      }
+    }, 3000); // Simulate a 3-second network delay
+  });
+  
+  // Using async/await with Fetch API
+  async function fetchData() {
+    try {
+      const response = await fetch("https://jsonplaceholder.typicode.com/posts/1");
+      if (!response.ok) {
+        throw new Error(`Fetch failed with status ${response.status}`);
+      }
+      const data = await response.json();
+      console.log("Fetched data:", data);
+    } catch (error) {
+      console.error("Error fetching data:", error.message);
+    }
+  }
+  
+  networkRequest
+    .then(result => {
+      console.log(result); 
+    })
+    .catch(error => {
+      console.error(error); 
+    });
+  fetchData();
+  

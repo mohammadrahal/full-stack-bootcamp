@@ -84,7 +84,7 @@ const networkRequest = new Promise((resolve, reject) => {
     }
   };
   
-  const postIds = [4, 5, 6, 7, 8];
+  const postIds = [4, 5, 6, 7, 8,9];
   
   async function fetchPostsSequentially() {
     for (const postId of postIds) {

@@ -94,3 +94,56 @@ const quotesArray = [
       "Hell, there are no rules here-- we're trying to accomplish something.",
   },
 ];
+
+
+
+const container = document.getElementById("quotes");
+
+quotesArray.forEach(quoteArr => {
+  const blockquote = document.createElement("blockquote");
+  blockquote.textContent = quoteArr.content;
+
+  const authorDiv = document.createElement("div");
+  authorDiv.classList.add("author");
+
+  const citation = document.createElement("cite");
+  citation.textContent = quoteArr.author;
+
+  authorDiv.innerHTML = "&mdash; ";
+  authorDiv.appendChild(citation);
+
+  blockquote.appendChild(authorDiv);
+
+  container.appendChild(blockquote);
+});
+
+// filtering search
+const searchFilter = document.getElementById("authorSearch");
+const btn = document.getElementById("authorBtn");
+
+btn.addEventListener("click", () => {
+  const authorToFilter = searchFilter.value.toUpperCase(); 
+  container.innerHTML = "";
+
+  quotesArray.forEach(quoteArr => {
+    const UppercaseAuthor = quoteArr.author.toUpperCase();
+    if (UppercaseAuthor.includes(authorToFilter)) {
+     
+      const blockquote = document.createElement("blockquote");
+      blockquote.textContent = quoteArr.content;
+
+      const authorDiv = document.createElement("div");
+      authorDiv.classList.add("author");
+
+      const citation = document.createElement("cite");
+      citation.textContent = quoteArr.author;
+
+      authorDiv.innerHTML = "&mdash; ";
+      authorDiv.appendChild(citation);
+
+      blockquote.appendChild(authorDiv);
+
+      container.appendChild(blockquote);
+    }
+  });
+});

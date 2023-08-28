@@ -61,6 +61,6 @@ newForm.addEventListener('submit', function (event) {
     newForm.appendChild(errorElement);
   } else {
     // Passwords match, redirect to quotes page or perform any other action here
-    window.location.href = 'quote.html';
+    window.location.href = 'quotes.html';
   }
 });
